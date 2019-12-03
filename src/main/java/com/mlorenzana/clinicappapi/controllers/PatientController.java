@@ -1,7 +1,7 @@
 package com.mlorenzana.clinicappapi.controllers;
 
 import com.mlorenzana.clinicappapi.services.PatientService;
-import models.PatientModel;
+import com.mlorenzana.clinicappapi.models.PatientModel;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

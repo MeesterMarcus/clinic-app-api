@@ -1,4 +1,4 @@
-package models;
+package com.mlorenzana.clinicappapi.models;
 
 import lombok.Data;
 

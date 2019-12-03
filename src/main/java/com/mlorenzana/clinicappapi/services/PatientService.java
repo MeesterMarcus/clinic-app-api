@@ -1,7 +1,6 @@
 package com.mlorenzana.clinicappapi.services;
 
-import models.PatientModel;
-import org.springframework.http.ResponseEntity;
+import com.mlorenzana.clinicappapi.models.PatientModel;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
