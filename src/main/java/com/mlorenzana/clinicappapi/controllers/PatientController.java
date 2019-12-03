@@ -2,7 +2,6 @@ package com.mlorenzana.clinicappapi.controllers;
 
 import com.mlorenzana.clinicappapi.entities.PatientEntity;
 import com.mlorenzana.clinicappapi.services.PatientService;
-import com.mlorenzana.clinicappapi.models.PatientModel;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;

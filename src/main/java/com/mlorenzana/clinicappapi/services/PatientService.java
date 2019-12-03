@@ -3,12 +3,8 @@ package com.mlorenzana.clinicappapi.services;
 
 import com.mlorenzana.clinicappapi.entities.PatientEntity;
 import com.mlorenzana.clinicappapi.repositories.PatientRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import com.mlorenzana.clinicappapi.models.PatientModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
