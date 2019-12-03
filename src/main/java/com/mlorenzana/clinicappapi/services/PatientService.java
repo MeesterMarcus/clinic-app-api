@@ -4,6 +4,7 @@ package com.mlorenzana.clinicappapi.services;
 import com.mlorenzana.clinicappapi.entities.PatientEntity;
 import com.mlorenzana.clinicappapi.repositories.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import com.mlorenzana.clinicappapi.models.PatientModel;
 
@@ -25,7 +26,7 @@ public class PatientService {
         return this.patientRepository.findAll();
     }
 
-//    public ResponseEntity<?> addPatient() {
-//
-//    }
+    public void addPatient(PatientEntity entity) {
+        this.patientRepository.save(entity);
+    }
 }

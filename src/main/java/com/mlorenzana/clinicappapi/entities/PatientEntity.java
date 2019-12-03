@@ -16,7 +16,7 @@ public class PatientEntity {
             sequenceName = "patient_sequence",
             initialValue = 1000
     )
-    String id;
+    Long id;
 
     @Column(columnDefinition = "first_name")
     String firstName;
