@@ -2,9 +2,7 @@ package com.mlorenzana.clinicappapi.services;
 
 
 import com.mlorenzana.clinicappapi.entities.AppointmentEntity;
-import com.mlorenzana.clinicappapi.entities.PatientEntity;
 import com.mlorenzana.clinicappapi.repositories.AppointmentRepository;
-import com.mlorenzana.clinicappapi.repositories.PatientRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
