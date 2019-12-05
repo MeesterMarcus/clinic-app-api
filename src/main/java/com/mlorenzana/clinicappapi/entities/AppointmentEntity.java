@@ -29,7 +29,7 @@ public class AppointmentEntity {
     String apptType;
 
     @ManyToOne
-    @JoinColumn(name="patientId", referencedColumnName = "id")
+    @JoinColumn(name="patient_id", referencedColumnName = "id")
     PatientEntity patientEntity;
 
 }
