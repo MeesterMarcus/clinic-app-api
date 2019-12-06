@@ -25,4 +25,8 @@ public class PatientService {
     public void addPatient(PatientEntity entity) {
         this.patientRepository.save(entity);
     }
+
+    public PatientEntity getPatientById(Long id) {
+        return this.patientRepository.getById(id);
+    }
 }

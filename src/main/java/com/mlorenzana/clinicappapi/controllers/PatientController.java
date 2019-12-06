@@ -28,4 +28,9 @@ public class PatientController {
         this.patientService.addPatient(patientEntity);
     }
 
+    @GetMapping(value="getPatient/{id}")
+    public PatientEntity getPatientById(@PathVariable("id") Long id) {
+        return this.patientService.getPatientById(id);
+    }
+
 }
