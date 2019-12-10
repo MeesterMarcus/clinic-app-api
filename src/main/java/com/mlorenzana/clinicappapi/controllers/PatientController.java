@@ -8,7 +8,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("api/patients")
 public class PatientController {
 
     private final PatientService patientService;
@@ -31,6 +31,11 @@ public class PatientController {
     @GetMapping(value="getPatient/{id}")
     public PatientEntity getPatientById(@PathVariable("id") Long id) {
         return this.patientService.getPatientById(id);
+    }
+
+    @PostMapping(path="save")
+    public void saveNote(@RequestBody PatientEntity patientEntity) {
+        this.patientService.save(patientEntity);
     }
 
 }

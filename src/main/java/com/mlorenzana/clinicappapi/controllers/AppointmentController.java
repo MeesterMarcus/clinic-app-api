@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("api/appt")
 public class AppointmentController {
 
     private final AppointmentService appointmentService;
@@ -44,6 +44,11 @@ public class AppointmentController {
     @Transactional
     public void clear() {
         this.appointmentService.clear();
+    }
+
+    @PostMapping(path="save")
+    public void saveNote(@RequestBody AppointmentEntity appointmentEntity) {
+        this.appointmentService.save(appointmentEntity);
     }
 
 }

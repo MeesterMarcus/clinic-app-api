@@ -2,7 +2,6 @@ package com.mlorenzana.clinicappapi.services;
 
 
 import com.mlorenzana.clinicappapi.entities.AppointmentEntity;
-import com.mlorenzana.clinicappapi.entities.PatientEntity;
 import com.mlorenzana.clinicappapi.repositories.AppointmentRepository;
 import org.springframework.stereotype.Service;
 
@@ -39,5 +38,9 @@ public class AppointmentService {
 
     public void clear() {
         this.appointmentRepository.clear();
+    }
+
+    public void save(AppointmentEntity entity) {
+        this.appointmentRepository.save(entity);
     }
 }
