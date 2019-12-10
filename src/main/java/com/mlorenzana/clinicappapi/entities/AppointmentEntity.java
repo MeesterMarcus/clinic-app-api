@@ -28,6 +28,9 @@ public class AppointmentEntity {
     @Column(name="appt_type")
     String apptType;
 
+    @Column(name="complete")
+    String complete;
+
     @ManyToOne
     @JoinColumn(name="patient_id", referencedColumnName = "id")
     PatientEntity patientEntity;

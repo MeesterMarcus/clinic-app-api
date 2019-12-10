@@ -42,4 +42,7 @@ public class PatientEntity {
     @Column(columnDefinition = "phone")
     String phone;
 
+    @Column(columnDefinition = "notes")
+    String notes;
+
 }

@@ -2,6 +2,7 @@ package com.mlorenzana.clinicappapi.services;
 
 
 import com.mlorenzana.clinicappapi.entities.AppointmentEntity;
+import com.mlorenzana.clinicappapi.entities.PatientEntity;
 import com.mlorenzana.clinicappapi.repositories.AppointmentRepository;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +23,21 @@ public class AppointmentService {
         return this.appointmentRepository.findAll();
     }
 
+    public AppointmentEntity getApptById(Long id) {
+        return this.appointmentRepository.getById(id);
+    }
+
     public void addAppt(AppointmentEntity entity) {
         this.appointmentRepository.save(entity);
+    }
+
+    public void complete(Long id) {
+        AppointmentEntity entity = this.appointmentRepository.getOne(id);
+        entity.setComplete("Y");
+        this.appointmentRepository.save(entity);
+    }
+
+    public void clear() {
+        this.appointmentRepository.clear();
     }
 }
