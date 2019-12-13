@@ -1,7 +1,7 @@
 package com.mlorenzana.clinicappapi.services;
 
 
-import com.mlorenzana.clinicappapi.entities.AppointmentEntity;
+import com.mlorenzana.clinicappapi.entities.Appointment;
 import com.mlorenzana.clinicappapi.repositories.AppointmentRepository;
 import org.springframework.stereotype.Service;
 
@@ -18,20 +18,20 @@ public class AppointmentService {
         this.appointmentRepository = appointmentRepository;
     }
 
-    public List<AppointmentEntity> getAppts() {
+    public List<Appointment> getAppts() {
         return this.appointmentRepository.findAll();
     }
 
-    public AppointmentEntity getApptById(Long id) {
+    public Appointment getApptById(Long id) {
         return this.appointmentRepository.getById(id);
     }
 
-    public void addAppt(AppointmentEntity entity) {
+    public void addAppt(Appointment entity) {
         this.appointmentRepository.save(entity);
     }
 
     public void complete(Long id) {
-        AppointmentEntity entity = this.appointmentRepository.getOne(id);
+        Appointment entity = this.appointmentRepository.getOne(id);
         entity.setComplete("Y");
         this.appointmentRepository.save(entity);
     }
@@ -40,7 +40,7 @@ public class AppointmentService {
         this.appointmentRepository.clear();
     }
 
-    public void save(AppointmentEntity entity) {
+    public void save(Appointment entity) {
         this.appointmentRepository.save(entity);
     }
 }

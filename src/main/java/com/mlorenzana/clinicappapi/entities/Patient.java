@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="patients")
 @Data
-public class PatientEntity {
+public class Patient {
 
     @Id
     @GeneratedValue(generator = "patient_generator")

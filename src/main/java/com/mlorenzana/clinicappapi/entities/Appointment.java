@@ -8,7 +8,7 @@ import java.time.ZonedDateTime;
 @Entity
 @Data
 @Table(name = "appointments")
-public class AppointmentEntity {
+public class Appointment {
 
     @Id
     @GeneratedValue(generator = "patient_generator")
@@ -33,6 +33,6 @@ public class AppointmentEntity {
 
     @ManyToOne
     @JoinColumn(name="patient_id", referencedColumnName = "id")
-    PatientEntity patientEntity;
+    Patient patient;
 
 }

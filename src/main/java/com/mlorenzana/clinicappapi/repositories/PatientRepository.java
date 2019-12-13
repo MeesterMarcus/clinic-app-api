@@ -1,9 +1,9 @@
 package com.mlorenzana.clinicappapi.repositories;
 
-import com.mlorenzana.clinicappapi.entities.PatientEntity;
+import com.mlorenzana.clinicappapi.entities.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PatientRepository extends JpaRepository<PatientEntity, Long> {
+public interface PatientRepository extends JpaRepository<Patient, Long> {
 
-    PatientEntity getById(Long id);
+    Patient getById(Long id);
 }

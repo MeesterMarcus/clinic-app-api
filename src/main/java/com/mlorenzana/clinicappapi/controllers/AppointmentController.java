@@ -1,6 +1,6 @@
 package com.mlorenzana.clinicappapi.controllers;
 
-import com.mlorenzana.clinicappapi.entities.AppointmentEntity;
+import com.mlorenzana.clinicappapi.entities.Appointment;
 import com.mlorenzana.clinicappapi.services.AppointmentService;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,19 +19,19 @@ public class AppointmentController {
     }
 
     @GetMapping(value="getAppts")
-    public List<AppointmentEntity> getAppts() {
+    public List<Appointment> getAppts() {
         return this.appointmentService.getAppts();
     }
 
     @GetMapping(value="getAppt/{id}")
-    public AppointmentEntity getPatientById(@PathVariable("id") Long id) {
+    public Appointment getPatientById(@PathVariable("id") Long id) {
         return this.appointmentService.getApptById(id);
     }
 
     @PostMapping(path="addAppt")
     @Transactional
-    public void addAppt(@RequestBody AppointmentEntity appointmentEntity) {
-        this.appointmentService.addAppt(appointmentEntity);
+    public void addAppt(@RequestBody Appointment appointment) {
+        this.appointmentService.addAppt(appointment);
     }
 
     @PostMapping(path="complete")
@@ -47,8 +47,8 @@ public class AppointmentController {
     }
 
     @PostMapping(path="save")
-    public void saveNote(@RequestBody AppointmentEntity appointmentEntity) {
-        this.appointmentService.save(appointmentEntity);
+    public void saveNote(@RequestBody Appointment appointment) {
+        this.appointmentService.save(appointment);
     }
 
 }

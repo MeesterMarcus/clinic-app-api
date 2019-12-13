@@ -1,6 +1,6 @@
 package com.mlorenzana.clinicappapi.controllers;
 
-import com.mlorenzana.clinicappapi.entities.PatientEntity;
+import com.mlorenzana.clinicappapi.entities.Patient;
 import com.mlorenzana.clinicappapi.services.PatientService;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,24 +18,24 @@ public class PatientController {
     }
 
     @GetMapping(value="getPatients")
-    public List<PatientEntity> getPatients() {
+    public List<Patient> getPatients() {
         return this.patientService.getPatients();
     }
 
     @PostMapping(path="addPatient")
     @Transactional
-    public void addPatient(@RequestBody PatientEntity patientEntity) {
-        this.patientService.addPatient(patientEntity);
+    public void addPatient(@RequestBody Patient patient) {
+        this.patientService.addPatient(patient);
     }
 
     @GetMapping(value="getPatient/{id}")
-    public PatientEntity getPatientById(@PathVariable("id") Long id) {
+    public Patient getPatientById(@PathVariable("id") Long id) {
         return this.patientService.getPatientById(id);
     }
 
     @PostMapping(path="save")
-    public void saveNote(@RequestBody PatientEntity patientEntity) {
-        this.patientService.save(patientEntity);
+    public void saveNote(@RequestBody Patient patient) {
+        this.patientService.save(patient);
     }
 
 }

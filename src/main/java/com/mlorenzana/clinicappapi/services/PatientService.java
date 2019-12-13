@@ -1,7 +1,7 @@
 package com.mlorenzana.clinicappapi.services;
 
 
-import com.mlorenzana.clinicappapi.entities.PatientEntity;
+import com.mlorenzana.clinicappapi.entities.Patient;
 import com.mlorenzana.clinicappapi.repositories.PatientRepository;
 import org.springframework.stereotype.Service;
 
@@ -18,19 +18,19 @@ public class PatientService {
         this.patientRepository = patientRepository;
     }
 
-    public List<PatientEntity> getPatients() {
+    public List<Patient> getPatients() {
         return this.patientRepository.findAll();
     }
 
-    public void addPatient(PatientEntity entity) {
+    public void addPatient(Patient entity) {
         this.patientRepository.save(entity);
     }
 
-    public PatientEntity getPatientById(Long id) {
+    public Patient getPatientById(Long id) {
         return this.patientRepository.getById(id);
     }
 
-    public void save(PatientEntity entity) {
+    public void save(Patient entity) {
         this.patientRepository.save(entity);
     }
 }
