@@ -18,23 +18,23 @@ public class PatientController {
         this.patientService = patientService;
     }
 
-    @GetMapping(value="getPatients")
+    @GetMapping()
     public List<Patient> getPatients() {
         return this.patientService.getPatients();
     }
 
-    @PostMapping(path="addPatient")
+    @PostMapping()
     @Transactional
     public void addPatient(@RequestBody Patient patient) {
         this.patientService.addPatient(patient);
     }
 
-    @GetMapping(value="getPatient/{id}")
+    @GetMapping(value="{id}")
     public Patient getPatientById(@PathVariable("id") Long id) {
         return this.patientService.getPatientById(id);
     }
 
-    @PostMapping(path="save")
+    @PutMapping()
     public void saveNote(@RequestBody Patient patient) {
         this.patientService.save(patient);
     }
